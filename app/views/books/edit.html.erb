@@ -1,0 +1,23 @@
+<div class="container col-xs-12">
+<h1>Editing Book</h1>
+<%= form_for(@book) do |f| %>
+
+<% if @book.errors.any? %>
+	<p>error</p>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+	<label>Title</label>
+	<p><%= f.text_field :title %></p>
+	<label>Body</label>
+	<p><%= f.text_area :body %></p>
+	<p><%= f.submit 'Update Book', class: "btn btn-primary" %></p>
+	<p><%= link_to "Show", book_path(@book.id) %>
+		<%= link_to "Back", books_path %>
+	</p>
+<% end %>
+</div>
