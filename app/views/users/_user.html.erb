@@ -2,9 +2,9 @@
 <h2>User info</h2>
 
 <%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size: "100x100" %>
-<p>name<%= user.name %></p>
-<p>introduction<%= user.introduction %></p>
+<p>name	<%= user.name %></p>
+<p>introduction	<%= user.introduction %></p>
 <% if user.id == current_user.id %>
-	<p><%= link_to "", edit_user_path(user.id), class: "btn btn-default glyphicon glyphicon-wrench" %></p>
+	<p><%= link_to "", edit_user_path(user.id), class: "btn btn-default glyphicon glyphicon-wrench key" %></p>
 <% end %>
 </div>
