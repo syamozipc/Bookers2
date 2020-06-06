@@ -20,21 +20,26 @@
 	padding:0;
 	box-sizing:border-box;
 }
+header{
+	color:white;
+}
+header span{
+	font-size:20px;
+}
 body{
 	padding-top:70px;
 }
 .head{
 	color:white;
 }
-.icon-list{
-	line-height: 60px;
+nav .glyphicon{
+	color:#9d9d9d;
+	text-decoration:none;
 }
-.icon{
-	display:inline-block;
-	text-decoration: none;
-	margin:0 20px;
-	color:gray;
+ul{
+	list-style:none;
 }
+
 footer{
 	position:relative;
 }

@@ -1,10 +1,20 @@
-<div class="container">
-<h2>User info</h2>
+			<h2>User info</h2>
 
-<%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size: "100x100" %>
-<p>name	<%= user.name %></p>
-<p>introduction	<%= user.introduction %></p>
-<% if user.id == current_user.id %>
-	<p><%= link_to "", edit_user_path(user.id), class: "btn btn-default glyphicon glyphicon-wrench key" %></p>
-<% end %>
-</div>
+			<%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size: "100x100" %>
+			<table class="table">
+				<tbody>
+					<tr></tr>
+					<tr>
+						<th>name</th>
+						<th><%= user.name %></th>
+					</tr>
+					<tr>
+						<th>introduction
+						</th>
+						<th><%= user.introduction %>
+					</tr>
+					</tbody>
+			</table>
+			<% if user.id == current_user.id %>
+				<p><%= link_to "", edit_user_path(user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench key" %></p>
+			<% end %>
